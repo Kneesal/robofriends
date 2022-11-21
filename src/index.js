@@ -3,15 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
-import { robots } from './robots' //have to destructure because the robots file is not "export default"
-import CardList from './CardList'; //Parent component of card 
+import App from './App'; //Parent component of all our components
  // "./" means to access the file in this directory. 
 // In some of the above there is no"./" and react knows to find the file outside of this directory
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CardList robots = {robots}/>
+      <App/>
   </React.StrictMode>
 );
 
