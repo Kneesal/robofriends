@@ -14,11 +14,20 @@ class App extends Component {
       searchfield: "",
     };
   }
+
+onSearchChange=(event)=>{
+    this.setState({searchfield: event.target.value})
+    const filteredRobots = this.state.robots.filter(robots => {
+        return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
+    })
+    console.log(filteredRobots);
+}
+
   render() {
     return (
       <div className="tc">
         <h1>RoboFriends</h1>
-        <SearchBox />
+        <SearchBox searchChange={this.onSearchChange}/>
         <CardList robots={this.state.robots} /> {/* passing the state robots as a prop to the CardList as per the comments aboce. */}
       </div>
     );
