@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
-import App from './App'; //Parent component of all our components
+import App from './Container/App'; //Parent component of all our components
  // "./" means to access the file in this directory. 
 // In some of the above there is no"./" and react knows to find the file outside of this directory
 
